@@ -1,0 +1,117 @@
+.search-filter {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #1a1a1a;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-box {
+  flex: 2;
+  min-width: 250px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 3rem 0.8rem 1rem;
+  background: #121212;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: #666;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.search-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.search-button:hover {
+  background: #2563eb;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.search-icon {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #ffffff;
+}
+
+.generation-select {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.8rem 2rem 0.8rem 1rem;
+  background: #121212
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23999999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")
+    no-repeat right 0.75rem center;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.2s ease;
+}
+
+.generation-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.generation-select option {
+  padding: 8px;
+  background: #121212;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .search-filter {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .search-box,
+  .generation-select {
+    width: 100%;
+  }
+
+  .search-input,
+  .generation-select {
+    font-size: 16px; /* Previne zoom em dispositivos iOS */
+  }
+}
