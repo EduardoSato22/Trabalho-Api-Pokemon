@@ -62,6 +62,16 @@ const PokemonDetails = () => {
     return "#FF5722";
   };
 
+  // 🔹 Traduções das estatísticas
+  const statTranslations = {
+    hp: "HP",
+    attack: "Ataque",
+    defense: "Defesa",
+    "special-attack": "Ataque Especial",
+    "special-defense": "Defesa Especial",
+    speed: "Velocidade"
+  };
+
   return (
     <div className="details">
       <Link to="/" className="back-link">← Voltar à Home</Link>
@@ -114,7 +124,10 @@ const PokemonDetails = () => {
           <div className="stats-grid">
             {pokemon.stats.map(stat => (
               <div key={stat.name} className="stat-item">
-                <div className="stat-label">{stat.name}</div>
+                {/* 🔹 Usa tradução se existir, senão mantém original */}
+                <div className="stat-label">
+                  {statTranslations[stat.name] || stat.name}
+                </div>
                 <div className="stat-bar-container">
                   <div 
                     className="stat-bar" 

@@ -18,7 +18,7 @@
 
 .search-input {
   width: 100%;
-  padding: 0.8rem 3rem 0.8rem 1rem;
+  padding: 0.8rem 3rem 0.8rem 1rem; /* espaço extra à direita p/ o botão */
   background: #121212;
   border: 2px solid #333;
   border-radius: 8px;
@@ -61,12 +61,8 @@
 }
 
 .search-icon {
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  right: 0px;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 18px;   /* ícone centralizado e proporcional */
+  height: 18px;
   fill: #ffffff;
 }
 
@@ -112,6 +108,6 @@
 
   .search-input,
   .generation-select {
-    font-size: 16px; /* Previne zoom em dispositivos iOS */
+    font-size: 16px; /* Previne zoom em iOS */
   }
 }
